@@ -11,10 +11,11 @@ const pageStyles = {
 
 const logoStyles = {
     margin: '0 auto',
-    display: 'block'
+    display: 'block',
+    textAlign: 'center'
 }
 
-const Logo = () => (<img src={logoSVG} style={logoStyles} />)
+const Logo = () => (<img alt="situationi.st" src={logoSVG} style={logoStyles} />)
 
 // markup
 const IndexPage = () => {

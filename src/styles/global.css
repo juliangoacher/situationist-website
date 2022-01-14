@@ -1,5 +1,8 @@
 html, body {
     height: 100%;
-    background-color: red;
+    background-color: orange;
 }
 
+div#___gatsby, div#gatsby-focus-wrapper {
+    height: 100%;
+}
