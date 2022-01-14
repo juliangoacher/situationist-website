@@ -2,12 +2,19 @@ import * as React from 'react'
 
 import logoSVG from './situationist-logo.svg'
 
-const Logo = () => (<img src={logoSVG} />)
-
 // styles
 const pageStyles = {
-  padding: '10%'
+    display: 'flex',
+    alignItems: 'center',
+    height: '100%'
 }
+
+const logoStyles = {
+    margin: '0 auto',
+    display: 'block'
+}
+
+const Logo = () => (<img src={logoSVG} style={logoStyles} />)
 
 // markup
 const IndexPage = () => {
