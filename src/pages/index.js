@@ -12,7 +12,8 @@ const pageStyles = {
 const logoStyles = {
     margin: '0 auto',
     display: 'block',
-    textAlign: 'center'
+    textAlign: 'center',
+    width: '344px'
 }
 
 const Logo = () => (<img alt="situationi.st" src={logoSVG} style={logoStyles} />)
