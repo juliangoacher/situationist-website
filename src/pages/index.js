@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { useEffect } from 'react'
 
 import logoSVG from './situationist-logo.svg'
 
@@ -16,10 +16,17 @@ const logoStyles = {
     width: '344px'
 }
 
+const bgColors = ['goldenrod', 'yellow', 'green', 'blue', 'red']
+
 const Logo = () => (<img alt="situationi.st" src={logoSVG} style={logoStyles} />)
 
 // markup
 const IndexPage = () => {
+  useEffect(() => {
+    const color = bgColors[Math.floor(Math.random() * bgColors.length)]
+    document.documentElement.style.backgroundColor = color
+    document.body.style.backgroundColor = color
+  })
   return (
     <main style={pageStyles}>
         <Logo />
