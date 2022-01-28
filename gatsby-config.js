@@ -1,7 +1,7 @@
 module.exports = {
     siteMetadata: {
       title: `situationist-website`,
-        siteUrl: `https://www.yourdomain.tld`,
+        siteUrl: `https://situationi.st`,
     },
     plugins: [
     ]
