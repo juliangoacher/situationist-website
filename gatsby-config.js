@@ -5,15 +5,12 @@ module.exports = {
   },
   plugins: [
     {
-      // https://www.gatsbyjs.com/plugins/gatsby-plugin-google-analytics/
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: 'gatsby-plugin-google-gtag',
       options: {
-        // The property ID; the tracking code won't be generated without it
-        trackingId: 'G-YN1NVGSLBR',
-        // Defines where to place the tracking script - `true` in the head and `false` in the body
-        head: false,
-        // Defers execution of google analytics script after page load
-        defer: true
+        trackingIds: ['G-YN1NVGSLBR'],
+        pluginConfig: {
+          head: false
+        }
       }
     }
   ]
