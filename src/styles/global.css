@@ -8,3 +8,7 @@ html, body {
 div#___gatsby, div#gatsby-focus-wrapper {
     height: 100%;
 }
+
+img#logo {
+    filter: drop-shadow(5px 5px 3px grey);
+}

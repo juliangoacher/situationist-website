@@ -18,10 +18,11 @@ const logoStyles = {
 
 const bgColors = ['goldenrod', 'yellow', 'green', 'blue', 'red']
 
-const Logo = () => (<img alt="situationi.st" src={logoSVG} style={logoStyles} />)
+const Logo = () => (<img id="logo" alt="situationi.st" src={logoSVG} style={logoStyles} />)
 
 // markup
 const IndexPage = () => {
+    /*
   useEffect(() => {
     const { documentElement: doc, body } = document
       doc.style.opacity = '0.2'
@@ -41,6 +42,7 @@ const IndexPage = () => {
           }
       }, 50)
   })
+  */
   return (
     <main style={pageStyles}>
         <Logo />
