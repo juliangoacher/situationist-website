@@ -1,11 +1,14 @@
-import React, { useEffect } from 'react'
+import React, { useState } from 'react'
+import ReactCardFlip from 'react-card-flip'
+import { AwesomeQRCode } from '@awesomeqr/react'
 
 import logoSVG from './situationist-logo.svg'
 
-// styles
 const pageStyles = {
     display: 'flex',
     alignItems: 'center',
+    justifyContent: 'center',
+    width: '100%',
     height: '100%'
 }
 
@@ -16,38 +19,34 @@ const logoStyles = {
     width: '344px'
 }
 
-const bgColors = ['goldenrod', 'yellow', 'green', 'blue', 'red']
+const codeStyles = {
+    width: '344px',
+    height: '344px'
+}
 
-const Logo = () => (<img id="logo" alt="situationi.st" src={logoSVG} style={logoStyles} />)
+const Logo = ({ onClick }) => (
+    <img alt='situationi.st' src={logoSVG} style={logoStyles} onClick={onClick} />
+)
 
-// markup
+const Code = ({ text, onClick }) => (
+    <div style={codeStyles} onClick={onClick}>
+        <AwesomeQRCode options={{ text, size: 344 }} />
+    </div>
+)
+
 const IndexPage = () => {
-    /*
-  useEffect(() => {
-    const { documentElement: doc, body } = document
-      doc.style.opacity = '0.2'
-      body.style.opacity = '0.2'
-
-      const color = bgColors[Math.floor(Math.random() * bgColors.length)]
-      doc.style.backgroundColor = color
-      body.style.backgroundColor = color
-
-      let opacity = 0.2
-      const interval = setInterval(() => {
-          opacity += 0.1
-          doc.style.opacity = ''+opacity
-          body.style.opacity = ''+opacity
-          if (opacity >= 1) {
-              clearInterval(interval)
-          }
-      }, 50)
-  })
-  */
-  return (
-    <main style={pageStyles}>
-        <Logo />
-    </main>
-  )
+    const [flipped, setFlipped] = useState(false)
+    const flip = () => setFlipped(!flipped)
+    return (
+        <main style={pageStyles}>
+            <div id="logo">
+                <ReactCardFlip id="logo" isFlipped={flipped}>
+                    <Logo onClick={flip} />
+                    <Code onClick={flip} text={document.location.href} />
+                </ReactCardFlip>
+            </div>
+        </main>
+    )
 }
 
 export default IndexPage
