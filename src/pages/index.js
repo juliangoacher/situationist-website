@@ -42,7 +42,7 @@ const IndexPage = () => {
             <div id="logo">
                 <ReactCardFlip id="logo" isFlipped={flipped}>
                     <Logo onClick={flip} />
-                    <Code onClick={flip} text={document.location.href} />
+                    <Code onClick={flip} text='https://situationi.st' />
                 </ReactCardFlip>
             </div>
         </main>
