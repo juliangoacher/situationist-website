@@ -4,7 +4,7 @@ import { AwesomeQRCode } from '@awesomeqr/react'
 
 import logoSVG from './situationist-logo.svg'
 
-const logoSize = 200
+const logoSize = 150
 
 const pageStyles = {
     display: 'flex',
