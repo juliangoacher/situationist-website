@@ -4,6 +4,8 @@ import { AwesomeQRCode } from '@awesomeqr/react'
 
 import logoSVG from './situationist-logo.svg'
 
+const logoSize = 250
+
 const pageStyles = {
     display: 'flex',
     alignItems: 'center',
@@ -16,12 +18,12 @@ const logoStyles = {
     margin: '0 auto',
     display: 'block',
     textAlign: 'center',
-    width: '344px'
+    width: `${logoSize}px`
 }
 
 const codeStyles = {
-    width: '344px',
-    height: '344px'
+    width: `${logoSize}px`,
+    height: `${logoSize}px`
 }
 
 const Logo = ({ onClick }) => (
@@ -30,7 +32,7 @@ const Logo = ({ onClick }) => (
 
 const Code = ({ text, onClick }) => (
     <div style={codeStyles} onClick={onClick}>
-        <AwesomeQRCode options={{ text, size: 344 }} />
+        <AwesomeQRCode options={{ text, size: logoSize }} />
     </div>
 )
 
